@@ -1,0 +1,4 @@
+	//Receiving Activity
+ 
+ binding.showTitle.setText(getIntent().getStringExtra("title"));
+ binding.showDescription.setText(getIntent().getStringExtra("description"));

@@ -1,0 +1,9 @@
+		// Sender Activity
+
+
+	 holder.itemView.setOnClickListener(v -> {
+            Intent intent = new Intent(context, AllDataShowActivity.class);
+            intent.putExtra("title",arrayList.get(position).getTitle());
+            intent.putExtra("description",arrayList.get(position).getDescription());
+            context.startActivity(intent);
+        });
