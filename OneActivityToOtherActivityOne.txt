@@ -1,9 +1,18 @@
-		// Sender Activity
-
-
+		// Sender Data Activity
+	
+	// in Adapter
 	 holder.itemView.setOnClickListener(v -> {
             Intent intent = new Intent(context, AllDataShowActivity.class);
             intent.putExtra("title",arrayList.get(position).getTitle());
             intent.putExtra("description",arrayList.get(position).getDescription());
             context.startActivity(intent);
         });
+	
+	
+	// in Activity
+	String titleA = binding.showTitle.getText().toString();
+            String descriptionA = binding.showDescription.getText().toString();
+            Intent intent = new Intent(AllDataShowActivity.this, UpdateDataActivity.class);
+            intent.putExtra("title",titleA);
+            intent.putExtra("description",descriptionA);
+            startActivity(intent);
